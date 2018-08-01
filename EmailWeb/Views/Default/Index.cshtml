@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+@if(!String.IsNullOrEmpty(ViewBag.Message))
+{
+    <h1>@ViewBag.Message</h1>
+}
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        <label for="email">To:</label>
+        <input type="email" class="form-control" name="to" id="emailto">
+    </div>
+    <div class="form-group">
+        <label for="email">CC:</label>
+        <input type="email" class="form-control" name="cc" id="emailcc">
+    </div>
+    <div class="form-group">
+        <label for="subject">Subject:</label>
+        <input class="form-control" name="subject" id="subject">
+    </div>
+    <div class="form-group">
+        <label for="body">Body:</label>
+        <input class="form-control" name="body" id="body">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+}
+
